@@ -27,7 +27,7 @@ app.use('/videos', express.static(path.join(__dirname, 'videos')));
 // API route: /api/:category
 app.get('/api/:category', (req, res) => {
     const { category } = req.params;
-    const validCategories = ['sad', 'crush', 'hot', 'islamik'];
+    const validCategories = ['sad', 'crush', 'hot', 'status'];
 
     if (!validCategories.includes(category.toLowerCase())) {
         return res.status(400).json({ error: 'Invalid category' });
